@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传轮播</title>
+</head>
+<body>
+
+<form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+
+    <fieldset>
+
+        <legend>上传文件</legend>
+        <div>
+            <label>名字：</label>
+            <input type="text" name="name"/>
+        </div>
+
+        <div>
+            <label>描述：</label>
+            <input type="text" name="description"/>
+        </div>
+
+        <div>
+            <label>图片：</label>
+            <input type="file" name="docfile" />
+        </div>
+
+
+
+        <input type="submit" value="上传"/>
+
+    </fieldset>
+
+</form>
+</body>
+</html>

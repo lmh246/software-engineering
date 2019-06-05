@@ -1,0 +1,269 @@
+{% load staticfiles %}
+{% load web_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>网红小店</title>
+
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static 'website/css/pace.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/custom.css' %}">
+
+    <!-- js -->
+    <script src="{% static 'website/js/jquery-2.1.3.min.js' %}"></script>
+    <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'website/js/pace.min.js' %}"></script>
+    <script src="{% static 'website/js/modernizr.custom.js' %}"></script>
+</head>
+
+
+<body>
+
+
+<div class="container">
+    <header id="site-header">
+        <div class="row">
+            <div class="col-md-4 col-sm-5 col-xs-8">
+                <div class="logo">
+                    <h1><a href="http://localhost:8000"><b>网红</b> &amp; 小店</a></h1>
+                </div>
+            </div><!-- col-md-4 -->
+            <div class="col-md-8 col-sm-7 col-xs-4">
+                <nav class="main-nav" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" id="trigger-overlay" class="navbar-toggle">
+                            <span class="ion-navicon"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="cl-effect-11"><a href="http://localhost:8000" data-hover="首页">首页</a></li>
+                            <li class="cl-effect-11"><a href="http://localhost:8000/person" data-hover="个人中心">个人中心</a></li>
+                            <li class="cl-effect-11"><a href="http://localhost:8000/about" data-hover="关于">关于</a></li>
+                            <li class="cl-effect-11"><a href="http://localhost:8000/contact" data-hover="联系">联系</a></li>
+                            <li class="cl-effect-11"><a href="http://localhost:8000/xadmin" data-hover="登录">登录</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+                <div id="header-search-box">
+                    <a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
+                    <div id="search-form" class="search-form">
+                        <form role="search" method="get" id="searchform" action="#">
+                            <input type="search" placeholder="搜索" required>
+                            <button type="submit"><span class="ion-ios-search-strong"></span></button>
+                        </form>
+                    </div>
+                </div>
+            </div><!-- col-md-8 -->
+        </div>
+    </header>
+</div>
+<div class="col-md-2">
+
+
+    <div>
+
+  <!-- Nav tabs -->
+      <ul class="nav nav-tabs nav-stacked " role="tablist" id="myTabs" style="background:#e6e9ec;">
+            <li role="presentation" class="active"><a href="#history" aria-controls="history" role="tab" data-toggle="tab">观看历史</a></li>
+            <li role="presentation"><a href="#collection" aria-controls="collection" role="tab" data-toggle="tab">收藏</a></li>
+            <li role="presentation"><a href="#subscribe" aria-controls="subscribe" role="tab" data-toggle="tab">订阅</a></li>
+            <li role="presentation"><a href="#data-analysis" aria-controls="data-analysis" role="tab" data-toggle="tab">数据统计</a></li>
+            <li role="presentation"><a href="#comment" aria-controls="comment" role="tab" data-toggle="tab">我的评论</a></li>
+            <li role="presentation"><a href="#message" aria-controls="message" role="tab" data-toggle="tab">我的消息</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <!--<div class="tab-content">-->
+        <!--<div role="tabpanel" class="tab-pane active" id="home">1.</div>-->
+        <!--<div role="tabpanel" class="tab-pane" id="profile">..q.</div>-->
+        <!--<div role="tabpanel" class="tab-pane" id="messages">.w..</div>-->
+        <!--<div role="tabpanel" class="tab-pane" id="settings">.s..</div>-->
+      <!--</div>-->
+
+    </div>
+
+</div>
+<div class="col-md-10">
+    <!-- Tab panes -->
+      <div class="tab-content">
+          <!--历史纪录-->
+          <div role="tabpanel" class="tab-pane active" id="history">
+              <div class="col-md-10">
+                    <fieldset>
+                        <legend>今天</legend>
+                        <div class="float-left">
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">历史纪录1</a></h4>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">历史纪录2</a></h4>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">历史纪录3</a></h4>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">历史纪录3</a></h4>
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+
+                  <fieldset style="margin-top:100px">
+                        <legend>昨天</legend>
+                        <div class="float-left">
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">历史纪录1</a></h4>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">历史纪录2</a></h4>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">历史纪录3</a></h4>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">历史纪录3</a></h4>
+                            </div>
+
+                        </div>
+
+                  </fieldset>
+                  <fieldset style="margin-top:100px">
+                        <legend>前天</legend>
+                        <div class="float-left">
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">历史纪录1</a></h4>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">历史纪录2</a></h4>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">历史纪录3</a></h4>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">历史纪录3</a></h4>
+                            </div>
+
+                        </div>
+
+                  </fieldset>
+              </div>
+
+
+          </div>
+
+          <div role="tabpanel" class="tab-pane" id="collection">
+              <div class="float-left">
+                    <div class="col-md-3">
+                        <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                        <h4><a href="#">收藏纪录1</a></h4>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                        <h4><a href="#">收藏纪录2</a></h4>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                        <h4><a href="#">收藏纪录3</a></h4>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                        <h4><a href="#">收藏纪录3</a></h4>
+                    </div>
+
+               </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="subscribe">
+              <fieldset>
+                        <legend>栏目一</legend>
+                        <div class="float-left">
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">订阅1</a></h4>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">订阅2</a></h4>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">订阅3</a></h4>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">订阅3</a></h4>
+                            </div>
+
+                        </div>
+
+              </fieldset>
+              <fieldset>
+                        <legend>栏目二</legend>
+                        <div class="float-left">
+                            <div class="col-md-3">
+                                <img src="{% static 'website/imgs/me.jpg' %}" width="150px" height="150px">
+                                <h4><a href="#">订阅1</a></h4>
+                            </div>
+
+
+                        </div>
+
+              </fieldset>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="data-analysis">数据统计</div>
+          <div role="tabpanel" class="tab-pane" id="comment">我的评论</div>
+          <div role="tabpanel" class="tab-pane" id="message">我的消息</div>
+
+      </div>
+</div>
+<footer id="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Mobile Menu -->
+<div class="overlay overlay-hugeinc">
+    <button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+    <nav>
+        <ul>
+            <li><a href="http://localhost:8000">首页</a></li>
+            <li><a href="#">博客</a></li>
+            <li><a href="http://localhost:8000/about">关于</a></li>
+            <li><a href="http://localhost:8000/contact">联系</a></li>
+        </ul>
+    </nav>
+</div>
+
+<script src="{% static 'website/js/script.js' %}"></script>
+<script>
+    $('#myTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+</script>
+</body>
+</html>
